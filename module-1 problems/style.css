@@ -9,7 +9,7 @@
 	font-family: oxygen;
 	font-size: 50px;
 	background-color: grey;
-	height: 150px;
+	height: 200px;
 
 	margin: 20px;
 }
@@ -23,4 +23,9 @@
 color: #9A8B4F;
 text-decoration: underline;
 text-decoration: blink;
+}
+
+.contact {
+	color: hotpink;
+	text-decoration: none;
 }
