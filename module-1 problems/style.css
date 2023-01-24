@@ -1,0 +1,26 @@
+#body1 {
+	background: black;
+	lighting-color: blue;
+	color: whitesmoke;
+}
+
+#header-nav {
+	text-align: center;
+	font-family: oxygen;
+	font-size: 50px;
+	background-color: grey;
+	height: 150px;
+
+	margin: 20px;
+}
+
+.header {
+	height: 20px;
+}
+
+
+.link:hover {
+color: #9A8B4F;
+text-decoration: underline;
+text-decoration: blink;
+}
