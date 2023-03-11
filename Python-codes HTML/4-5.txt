@@ -1,0 +1,11 @@
+def get_season(month, day):
+    if month == 12 and day >= 21 or month <= 3 and day < 20:
+        return "Winter"
+    elif month >= 3 and day >= 20 or month <= 6 and day < 21:
+        return "Spring"
+    elif month >= 6 and day >= 21 or month <= 9 and day < 22:
+        return "Summer"
+    else:
+        return "Fall"
+season = get_season(3, 15)
+print(season) # Output: Spring
