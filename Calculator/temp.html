@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Temperature Converter</title>
+	<link rel="stylesheet" type="text/css" href="temp.css">
+	<script type="text/javascript" src="temp.js"></script>
+</head>
+<body>
+	<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn"><img src="menu.png" class="img"></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="index.html">Home</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="weight.html">Weight Converter</a>
+    <a href="length.html">Length Converter</a>
+  </div>
+</div>
+<div class="container">
+		<form>
+			<div class="converter">
+				<div class="display">
+					<input type="text" name="input" class="input">
+				</div>
+				<div class="buttons1">
+					<div><input type="button" value="Celcius to Fahrenheit" onclick="input.value=eval((input.value*1.8)+32)+'&#176F'"><input type="button" value="Fahrenheit to Celcius" onclick="input.value=eval((input.value-32)*0.55555555)+'&#176C'"></div>
+				</div>
+				<div class="buttons2">
+					<div><input type="button" value="Celcius to Kelvin" onclick="input.value=eval((input.value*1)+273.15)+'K'"><input type="button" value="Fahrenheit to Kelvin" onclick="input.value=eval(((input.value-32)*0.55555555)+273.15)+'K'"></div>
+				</div>
+				<div class="buttons3">
+					<div><input type="button" value="Kelvin to Celcius" onclick="input.value=input.value-273.15+'&#176C'"><input type="button" value="Kelvin to Fahrenheit" onclick="input.value=eval(((input.value-273)*1.8)+32)+'&#176F'"></div>
+				</div>
+				<div class="buttons4"><input type="button" value="Clear All" onclick="input.value=''"></div>
+			</div>
+		</form>
+	</div>
+</div>
+
+</body>
+</html>
