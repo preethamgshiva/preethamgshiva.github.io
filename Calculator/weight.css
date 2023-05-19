@@ -56,6 +56,7 @@ html{
 .show {display:block;}
 
 .container{
+  position: relative;
   width: 100%;
   height: 100vh;
   background: #282828;
@@ -67,6 +68,7 @@ html{
   background: #66FCF1;
   padding: 20px;
   border-radius: 10%;
+  position: relative;
 }
 .converter form input{
   border: 0;
@@ -131,4 +133,33 @@ form .converter .output input{
   margin-right: 20px;
   font-display: block;
   font-size: 25px;
+}
+
+
+@media only screen and (min-width: 350px){
+
+  .container{
+    width: 90%;
+    margin: 0px 10px 0px 10px;
+  }
+  .converter{
+    width: 100%;
+    margin: 0px 10px 0px 10px;
+    font-size: 15px;
+  }
+  .converter form input{
+    width: 100%;
+    font-size: 15px;
+    margin: 0px 10px 0px 10px;
+  }
+  form .display input{
+    width: 100;
+    font-size: 15px;
+  }
+  form .buttons input{
+    width: 80%;
+  }
+  .converter .text{
+    font-size: 20px;
+  }
 }
