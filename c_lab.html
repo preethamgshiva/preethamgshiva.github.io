@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>C_Lab_Internals</title>
+</head>
+<body>
+	<h3>Swap using repetative subtraction.</h3>
+	<p>
+		//Swapping using repetative subtraction.<br>
+	#include<stdio.h><br>
+	int main()<br>
+	{<br>
+		int a,b;<br>
+		printf("Enter two numbers");<br>
+		scanf("%d%d",&a,&b);<br>
+		printf("Numbers before swapping a=%d and b=%d\n",a,b);<br>
+		a=a+b;<br>
+		b=a-b;<br>
+		a=a-b;<br>
+		printf("Numbers after swapping a=%d and b=%d\n",a,b);<br>
+	}<br>
+</p>
+
+<h3>Swapping with bitwise operator</h3>
+<p>//Swap using bitwise operator.<br>
+	#include<stdio.h><br>
+	int main(){<br>
+		int a,b;<br>
+		printf("Enter 2 numbers:");<br>
+		scanf("%d%d",&a,&b);<br>
+		printf("Numbers before Swapping a=%d and b=%d.\n",a,b);<br>
+		a=a^b;<br>
+		b=a^b;<br>
+		a=a^b;<br>
+		printf("Numbers after swapping a=%d and b=%d.\n",a,b);<br>
+	}</p>
+
+</body>
+</html>
