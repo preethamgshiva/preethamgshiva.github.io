@@ -37,5 +37,157 @@
 		printf("Numbers after swapping a=%d and b=%d.\n",a,b);<br>
 	}</p>
 
+<h3>Circumference and area of circle</h3>
+<p>#include<stdio.h><br>
+	int main(){<br>
+		float r;<br>
+		float area,circumference,PI=3.14;<br>
+		printf("Enter radius of the circle: ");<br>
+		scanf("%f",&r);<br>
+		circumference=2*PI*r;<br>
+		area=PI*r*r;<br>
+		printf("Circumference = %3f\n",circumference);<br>
+		printf("Area = %3f\n",area);<br>
+	}</p>
+
+
+<h3>Quadratic Equation</h3>
+<p>#include<stdio.h><br>
+	#include<math.h><br>
+	#include<stdlib.h><br>
+	void main()<br>
+	{<br>
+		float a,b,c,disc,deno,root1,root2,ip,rp;<br>
+		printf("Enter three values of co-efficients: ");<br>
+		scanf("%f%f%f",&a,&b,&c);<br>
+	
+		if(a==0)<br>
+		{<br>
+			printf("Invalid Data");<br>
+			exit(0);<br>
+		}<br>
+		disc=(b*b)-(4*a*c);<br>
+		deno=2*a;<br>
+	
+		if(disc>0)<br>
+		{<br>
+			printf("Roots are real and distinct.\n");<br>
+			root1=(-b+sqrt(disc))/deno;<br>
+			root2=(-b+sqrt(disc))/deno;<br>
+			printf("Root1=%f and Root2=%f",root1,root2);<br>
+		}<br>
+		else if(disc==0)<br>
+		{<br>
+			printf("Roots are real and distinct.\n");<br>
+			printf("Root1=Root2=%f",-b/deno);<br>
+		}<br>
+	
+		else<br>
+		{<br>
+			printf("Roots are complex.\n");<br>
+			ip=sqrt(fabs(disc)/deno);<br>
+			rp=-b/deno;<br>
+			printf("Root1=%f+i%f\n Root2=%f-i%f\n",rp,ip,rp,ip);<br>
+		}<br>
+	}</p>
+
+<h3>Fibonacci Series</h3>
+<p>#include<stdio.h><br>
+	void main(){<br>
+		int num1=0,num2=1,no,counter,fab;<br>
+		printf("Enter Length of series: ");<br>
+		scanf("%d",&no);<br>
+		printf("%d\t%d\t",num1,num2);<br>
+		for(counter=1;counter<=no-2;counter++)<br>
+		{<br>
+			fab=num1+num2;<br>
+			printf("%d\t",fab);<br>
+			num1=num2;<br>
+			num2=fab;<br>
+		}<br>
+	}</p>
+
+<h3>Binary search</h3>
+<p>#include<stdio.h><br>
+	void main(){<br>
+		int i,item,low,mid,high,a[50],n;<br>
+		printf("Enter size of an array: ");<br>
+		scanf("%d",&n);<br>
+		printf("Enter elements of Array in sorted form: ");<br>
+		for(i=0;i<n;i++);<br>
+		scanf("%d",&a[i]);<br>
+		printf("Enter items to be searched: ");<br>
+		scanf("%d",&item);<br>
+		low=0;<br>
+		high=n-1;<br>
+		mid=(low+high)/2;<br>
+		while((low&lt;=high)&&(a[mid]!=item))<br>
+		{<br>
+			if(item<a[mid])<br>
+			high=mid-1;<br>
+			else<br>
+			low=mid+1;<br>
+			mid=(low+high)/2;<br>
+		}<br>
+		if(a[mid]==item)<br>
+		printf("%d found at location %d",item,mid+1);<br>
+		else<br>
+		printf("%d dosen't exist",item);<br>
+	}</p>
+
+	<h3>Linear search</h3>
+	<p>#include<stdio.h><br>
+		#include<stdlib.h><br>
+		void main(){<br>
+			int a[10],i,n,key;<br>
+			printf("Enter the no of elements: ");<br>
+			scanf("%d",&n);<br>
+			printf("Enter the array of elements: ");<br>
+			for(i=0;i<n;i++)<br>
+			{<br>
+				scanf("%d",&a[i]);<br>
+			}<br>
+			printf("Enter the key element: ");<br>
+			scanf("%d",&key);<br>
+			for(i=0;i<n;i++)<br>
+			{<br>
+				if(a[i]==key);<br>
+				{<br>
+					printf("%d Found at position %d",key,i+1);<br>
+					exit(0);<br>
+				}<br>
+			}<br>
+			printf("Not found");<br>
+		}</p>
+
+	<h3>Bubble sort</h3>
+	<p>#include<stdio.h><br>
+		void main(){<br>
+			int n,i,j,temp,a[10],k;<br>
+			printf("Enter the number of Elements: ");<br>
+			scanf("%d",&n);<br>
+			printf("Enter the elements to sort: ");<br>
+			for(i=0;i<n;i++)<br>
+			scanf("%d",&a[i]);<br>
+			printf("Given array: ");<br>
+			for(i=0;i<n;i++)<br>
+			printf("%d\t\n",a[i]);<br>
+			for(j=1;j<n;j++)<br>
+			{<br>
+				for(i=0;i<n-j;i++)<br>
+				{<br>
+					if(a[i]>a[i+1])<br>
+					{<br>
+						temp=a[i];<br>
+						a[i]=a[i+1];<br>
+						a[i+1]=temp;<br>
+					}<br>
+				}<br>
+			}<br>
+			printf("Sorted array:\n");<br>
+			for(i=0;i<n;i++)<br>
+			printf("%d\t\n",a[i]);<br>
+		}</p>
+
 </body>
 </html>
